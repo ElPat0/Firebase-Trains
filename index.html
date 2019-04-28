@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/css/style.css">
         <title>Firebase Trains</title>
+        <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
 
     </head>
     <body class="body">
@@ -19,8 +20,25 @@
             <div class="card border-secondary mb-3">
                     <div class="card-header">Header</div>
                     <div class="card-body text-secondary">
-                      <h5 class="card-title">Secondary card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      
+                      <div class="card mb-4">
+                            
+                            <div class="card-body">
+                              <table class="table table-sm table-hover" id='employee-table'>
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Train</th>
+                                    <th scope="col">Destination</th>
+                                    <th scope="col">Frequency</th>
+                                    <th scope="col">Next Arrival</th>
+                                    <th scope="col">Minutes Away</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
                     </div>
             </div>
             <div class="card border-primary mb-3">
@@ -31,24 +49,27 @@
                             <div class="form-row">
                               <div class="form-group col-md-4">
                                 <label for="inputTrain">Train Name</label>
-                                <input class="form-control" placeholder="Name">
+                                <input class="form-control" id="train-name-input" placeholder="Name">
                               </div>
                               <div class="form-group col-md-4">
                                 <label for="inputDestination">Destination</label>
-                                <input class="form-control" placeholder="Destination">
+                                <input class="form-control" id="destination-input" placeholder="Destination">
                               </div>
                             </div>
                             
                             <div class="form-row">
                               <div class="form-group col-md-4">
                                 <label for="inputFirst">First Departure</label>
-                                <input type="text" class="form-control" placeholder="HH:mm">
+                                <input type="text" class="form-control" id="firstDepart-input" placeholder="HH:mm">
                               </div>
                               <div class="form-group col-md-4">
                                 <label for="inputFreq">Frequency</label>
-                                <select class="form-control">
+                                <select class="form-control" id="frequency-input">
                                   <option selected>Choose...</option>
-                                  <option>...</option>
+                                  <option>15 Minutes</option>
+                                  <option>30 Minutes</option>
+                                  <option>45 Minutes</option>
+                                  <option>60 Minutes</option>
                                 </select>
                               </div>
                               
@@ -56,12 +77,11 @@
                             <div class="form-group">
                               
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary" id="add-train-btn">Submit</button>
                           </form>
                     </div>
             </div>
 <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
-<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
 <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 <script src="assets/js/java.js"></script>
     </body>
