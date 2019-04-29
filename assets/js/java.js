@@ -110,6 +110,7 @@ database.ref().on("child_added", function(childSnapshot) {
     console.log("MINUTES TILL DEPARTURE: " + minTillDepart);
 
     var nextTrain = moment().add(minTillDepart, "minutes");
+    //nextTrain.format("HH:mm");
     console.log("DEPARTURE TIME: " + moment(nextTrain).format("HH:mm"));
 
 
@@ -122,7 +123,7 @@ database.ref().on("child_added", function(childSnapshot) {
     $("<td>").text(trainFreq + " minutes"),
     $("<td>").text(firstDepart),
     $("<td>").text(nextTrain),
-    $("<td>").text(timeRemain + " minutes"),
+    $("<td>").text(minTillDepart + " minutes"),
   );
 
 
