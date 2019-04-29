@@ -1,11 +1,12 @@
-.body{
-    margin: 3%;
-    background-image: url(assets\images\trains.jpg) no-repeat center center fixed;
+.body { 
+    background: url(https://previews.123rf.com/images/lexan/lexan1106/lexan110600299/9707762-train-station-in-monaco-gare-de-monaco-.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    margin: 3%;
 }
+
 .jumbotron{
     background-color: brown;
     color: white;
